@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>form을 이용한 입력방식-text,password,radio</h1>
+    <p>input타입-text</p>
+    한줄메모 :
+    <input type="text" name="search" value="가나다라" /><br />
+    <p>input타입-password</p>
+    <div>
+        <label>패스워드 : </label>
+        <input type="password" name="password" />
+    </div>
+    <p>input타입-radio</p>
+    <div>
+        <table border="1">
+            <tr>
+                <th colspan="2">선택하시오(택1)</th>
+            </tr>
+            <tr>
+                <td><input type="radio" name="lecture" value="html" />HTML</td>
+                <td><input type="radio" name="lecture" value="CSS" />CSS</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="lecture" value="JavaStudio" />Javastudio
+                </td>
+                <td><input type="radio" name="lecture" value="C++" />C++</td>
+            </tr>
+        </table>
+        <p>
+            radio타입의 경우 name을 통해서 그룹으로 묶여져야 동시선택이 안된다.<br />value속성을
+            이용해 값을 전달한다.
+        </p>
+    </div>
+    <h3>체크박스</h3>
+    <div>
+        <label>컴퓨터언어</label>
+        <input type="checkbox" name="ist" value="html" checked />html
+        <input type="checkbox" name="ist" value="css" />css
+        <input type="checkbox" name="ist" value="js" />js
+        <input type="checkbox" name="ist" value="c++" disabled />c++
+    </div>
+    <p>
+        checkbox와 radio는 'checked-미리 선택해놓음' 과 'disabled-선택하지 못하게
+        막음' 속성이 있다.
+    </p>
+    <h3>파일선택</h3>
+    <input type="file" name="file" />
+    <input type="file" name="" accept="image/*" />
+    <hr />
+    <h2>input 타입이 아닌 입력창</h2>
+    <h3>선택(select)</h3>
+    <select name="fruit" id="">
+        <option value="apple">사과</option>
+        <option value="pear" selected>배</option>
+        <option value="orange">오렌지</option>
+        <option value="strawberry">딸기</option>
+    </select>
+    <h3>문장(textarea)</h3>
+    <textarea name="" id="" cols="10" rows="5"></textarea>
+    <h3>버튼(button)</h3>
+    <button onclick="alert('버튼')">버튼을 누르시오</button>
+    <hr />
+    <h3>form 을 통한 입력값 전송-submit</h3>
+    <form action="">
+        <input type="text" name="nickname" />
+        <input type="submit" value="전송" />
+        <button type="submit">전송</button>
+    </form>
+    <p>
+        작성한 입력값은 name=value형태로 전달이 된다.<br />그 값을 전달할 때는
+        반드시 form을 통해서 <br />form 안에 있는 submit 타입의 태그를 통해
+        전달하여야 한다.
+    </p>
+    <p>get은 주소로 값을 전달하고 post는 따로 값을 전달한다.</p>
+    <form action="">
+        <fieldset>
+            <legend>입력란</legend>
+            <label>이름 :</label>
+            <input type="text" name="name" />
+            <label>메일주소 :</label>
+            <input type="text" name="email" />
+            <input type="submit" value="전송" />
+        </fieldset>
+    </form>
+    <h3>input의 text타입 속성확인</h3>
+    <input type="text" value="초기값">
+    <input type="text" value="초기값"readonly disabled>
+    <input type="text" maxlength="10" size="29">
+</body>
+
+</html>

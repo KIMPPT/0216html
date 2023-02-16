@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<>
+    <h1>공간분할</h1>
+    <h2>display 블록</h2>
+    <p style="color:red;border: solid blue">p태그는 블록 속성 입니다.</p>
+    <p>이런 식으로 테두리가 페이지에 따라 늘거나 줄어들면 블록 태그 입니다</p>
+    <h5 style="border: solid yellow">h태그도 블록 속성 입니다</h5>
+    <ol style="border: solid purple">
+    리스트도 블록 속성 입니다</ol>
+    <div style="border: 3px solid pink;font-size:27px;color:red">
+        <p>div의 style에 영향을 받는 태그입니다.</p>
+        <p>div의 style에 영향을 받는 태그입니다2.</p>
+        <p style="color:blue;font-size:15px">div안에서 따로 스타일을 지정했다면 따로 지정한 스타일로 나옵니다</p>
+    </div>
+    <h style="border:solid green">단, 단독 h 태그는 아닙니다</h>
+    <hr>
+    <h2>display 인라인</h2>
+    <a style="color:white;background: purple;"href="#"> 인라인 속성을 가진 태그입니다</a>
+    <a href="#">인라인 속성을 가진 새로운 태그입니다</a>
+    <img src="./img/naver.png">
+    <div>
+        <img src="./img/naver.png">
+        <p>
+            인라인속성의 태그들을 줄을 바꿀 때는 div를 통해 줄을 바꿔주는 것이 용이하다
+            <br> br의 경우는 문자를 줄바꿈할 때 사용
+        </p>
+    </div>
+    <p style="border:3px aqua double"><span style="color:red;background-color:green">스판(span)태그</span>를 사용하였습니다</p>
+    <h3>인라인 속성의 iframe</h3>
+    <iframe src="./htmltext.html" style="width:300px;height:300px"></iframe>
+    <a href="./htmltableex.html" target="iframetext">실습화면보기</a>
+    <iframe name="iframetext"></iframe>
+    <a href="" target="restart">HTML 텍스트 화면으로 넘어가기</a>
+</body>
+</html>

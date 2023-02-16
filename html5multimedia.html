@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        HTML5 멀티미디어
+    </h1>
+    <h2>
+        영상-video
+    </h2>
+    <video src="./video/Christmas.mp4" controls autoplay loop style="width:600px;height:400px;">
+    </video>
+    <p>
+        controls:컨트롤러 생성<br>
+        autoplay:자동실행(단, 소리가 있는 영상 시 mute(음소거)상태에서만)<br>
+        loop:반복
+    </p>
+    <hr>
+    <h2>
+        오디오-audio
+    </h2>
+    <audio src="./audio/dark.mp3" controls></audio>
+    <p>
+        audio도 video랑 같은 속성을 씀. autoplay의 경우 mute가 아니여도 자동실행함
+    </p>
+    <h2>
+        플러그인
+    </h2>
+    <h3>
+        object
+    </h3>
+    <object data="./data/양주눈꽃축제와이어프레임.pdf" type="" style="width:500px;height:500px"></object>
+    <object data="./img/naver.png" type=""></object>
+    <h3>
+        embed
+    </h3>
+    <embed src="./data/양주눈꽃축제와이어프레임.pdf" type="" style="border:2px black soild;width:400px;height:300px">
+        <embed src="./img/naver.png" type="">
+            <hr>
+    <h3>
+        youtube 삽입하기
+    </h3>
+    <iframe width="1037" height="583" src="https://www.youtube.com/embed/094y1Z2wpJg?autoplay=1" title="The Simplest Math Problem No One Can Solve - Collatz Conjecture" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <p>
+        video 설정을 유튜브에서도 적용 할 수 있다. url 뒤에 ?를 이용한 쿼리문으로 작성하면 된다 <br>
+        ?mute=1은 음소거, ?autoplay=1은 자동재생 이다. 1은 ture(참), 0은 false(거짓) 값으로 사용
+    </p>
+</body>
+</html>

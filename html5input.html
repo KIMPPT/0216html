@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>input 추가요소(HTML5)</h1>
+    <h2>datalist</h2>
+    <input list="과일종류">
+    <datalist id="과일종류">
+        <option value="사과"></option>
+        <option value="배"></option>
+        <option value="귤"></option>
+    </datalist>
+    <p>
+        input의 값 중에 몇 개를 리스트로 띄워주는 역할<br>
+        input태그와 datalist태그를 list와 id로 연결되어있어야함. 같지 않으면 리스트가 뜨지 않음
+    </p>
+    <hr>
+    <keygen>
+    <p>
+        keyget은 지금은 지원하지 않는 태그<br>
+        기능은 사용자가 인증 할 수 있는 안전한 방법을 제공해줌<br>
+        발전함에 따라 태그가 새로 생성되거나 쓰이지 않음
+    </p>
+    <hr>
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="range" name="b" id="b">
+        <input type="number" name="a" id="a" value="0">
+        <output name="result" for="a b">0
+        </output>
+    </form>
+    <p>
+        output 태그는 form의 oninput 속성과 함께 사용한다. <br>
+        oninput에 들어간 자바스크립트의 명령어를 계산해서 쓸 수 있다. <br>
+        보통은 자바스크립트를 script 태그 안에서 사용한다.
+    </p>
+    <h2>추가 form 타입</h2>
+    <p>
+        autocomplete/novalidate 
+    </p>
+    <hr>
+    <h2>추가된 input 타입 요소</h2>
+    <label for="">number-숫자입력</label>
+    <input type="number" step="10" max="100" min="20"><br>
+    <label for="">range-범위</label>
+    <input list="marker"type="range" step="1" max="10" min="0">
+    <datalist id="marker">
+        <option value="0"></option>
+        <option value="5"></option>
+        <option value="10"></option>
+    </datalist>
+    <p>
+        range의 경우 초기값은 눈금이 없어서 움직이다보면 값을 모를 수 있으므로 <br>
+        datalist를 이용하여 눈금을 만들어 주거나 자바스크립트로 통해서 값을 가져올 수 있다.
+    </p>
+    <label>color-색 선택</label>
+    <input type="color" value="#aabbcc"><br>
+    <label>date-날짜입력</label>
+    <input type="date" value="2023-02-13" min="2022-02-13" max="2023-02-17"><br>
+    <label>time-시간입력</label>
+    <input type="time" value="08:10"><br>
+    <label>datetime-local 날짜와시간</label>
+    <input type="datetime-local" value="2023-02-13 08:10"><br>
+    <label>month : 연도와 월</label>
+    <input type="month" value="2023-02" min="2022-01" max="2023-07"><br>
+    <label>week : 연도와 주</label>
+    <input type="week" value="2023-W07" min="2022-W06" max="2023-W15"><br>
+    <form action="#" autocomplete="on" novalidate>
+        <!--novalidate를 넣게 되면 유효성 검사를 하지 않음.즉, 양식이 틀려도 강제 전송함-->
+        <label>email : 이메일</label>
+        <input type="email" name="email">
+        <input type="submit" value="제출"><br>
+        <label>url : 주소</label>
+        <input type="url" name="url">
+        <input type="submit" value="제출"><br>
+        <p>
+            email과 url의 경우 이메일의 형태가 갖추어져 있는지 제출 때 유효성 검사를 함(validation)
+        </p>
+        <label>tel : 전화번호</label>
+        <input type="tel" name="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
+        <input type="submit" value="제출"><br>
+        <label>search : 검색</label>
+        <input type="search" name="search">
+        <input type="submit" value="제출"><br>
+    </form>
+    <hr>
+    <h1>input 요소의 속성</h1>
+    <form action="">
+        <label for="">autofocus:웹페이지 로드 시 자동으로 포커스</label><br>
+        <input type="text" autofocus><br>
+        <label for="">placeholder:입력하기 전까지 힌트같이 남겨놓음</label><br>
+        <input type="text" placeholder="단어를 적으세요" name="이름"required><br>
+        <label for="">required:형식</label><br>
+        <input type="submit" value="제출">
+
+    </form>
+</body>
+</html>
